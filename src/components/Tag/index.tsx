@@ -1,20 +1,8 @@
-import React from 'react'
 import styles from './Tag.module.css'
 import classNames from 'classnames';
+import type { TagPropsState } from '../../types';
 
 /* export type TagValue = "Livre" | "10 anos" | "12 anos" | "14 anos" | "16 anos" | "2D" | "3D"; */
-
-type Categoria = "Livre" | "10 anos" | "12 anos" | "14 anos" | "16 anos"
-
-type Censura = "2D" | "3D" 
-
-interface TagProps {
-  value: Categoria | Censura; 
-}
-
-export interface TagPropsState {
-    value: TagProps;
-}
 
 const tagClasses = {
   Livre: styles.livre,
