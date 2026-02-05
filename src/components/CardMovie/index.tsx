@@ -1,14 +1,15 @@
 import styles from './CardMovie.module.css'
 import { Tag, type TagPropsState } from '../Tag'
 
-interface CardMovieProps {
+export interface CardMovieProps {
+    id: number
     src: string
     alt: string
     titulo: string
     genero: string
     categoria: TagPropsState
     censura: TagPropsState
-    duracao: string
+    duracao: number
 }
 export const CardMovie = ( { src, alt, titulo, genero, categoria,censura,duracao }: CardMovieProps) => {
 
