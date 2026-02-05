@@ -1,7 +1,7 @@
 import { Logo } from "../Logo/Logo";
 import { HeaderItem } from "./components/HeaderItem";
-import { HeaderList } from "./components/HeaderLIst";
-import { HeaderLinks } from "./components/HeaderLInks";
+import { HeaderList } from "./components/HeaderList";
+import { HeaderLinks } from "./components/HeaderLinks";
 import { HeaderFormFilter } from "./components/HeaderFormFilter";
 import { HeaderActions } from "./components/HeaderActions";
 import logo from '../../../public/Logo e Favicon/Logo.svg' 

@@ -2,6 +2,7 @@
 import banner from '../public/Imagens/Banner principal/Banner Desktop.png' 
 import { Link } from "./components/Link"
 import { Header } from "./components/Header"
+import { InputText } from "./components/InputText"
 
 
 export function App() {
@@ -19,6 +20,7 @@ export function App() {
      >
         Entrar
      </Link>
+     <InputText/>
     </>
      
     

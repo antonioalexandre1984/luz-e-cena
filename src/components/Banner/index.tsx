@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from './Banner.module.css'
 
-interface BannerProps{
+interface BannerProps extends React.ImgHTMLAttributes<HTMLImageElement>{
     src: string;
     alt: string;
 
 }
-export const Banner = ({src,alt}:BannerProps) => {
+export const Banner = ({src,alt,...props}:BannerProps) => {
   return (
-    <img src={src} alt={alt} className={styles.Banner}/>
+    <img src={src} alt={alt} {...props}className={styles.Banner}/>
   )
 }
