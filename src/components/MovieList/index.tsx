@@ -1,7 +1,6 @@
 import { CardMovie } from "../CardMovie"
-import { type CardMovieProps } from "../CardMovie"
 import styles from './MovieList.module.css'
-
+import type {CardMovieProps} from "../../types/index"
 interface Movie extends CardMovieProps{
     title: string
 }

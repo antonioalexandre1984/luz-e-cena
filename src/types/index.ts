@@ -4,9 +4,10 @@ export interface CardMovieProps {
     alt: string
     titulo: string
     genero: string
-    categoria: TagPropsState
-    censura: TagPropsState
+    categoria: string
+    censura: string
     duracao: number
+    title: string
 }
 
 
@@ -15,9 +16,9 @@ export interface TagPropsState {
 }
 
 export interface TagProps {
-    value: Categoria | Censura;
+    value: "Livre" | "10 anos" | "12 anos" | "14 anos" | "16 anos" | "2D" | "3D";
 }
 
-type Categoria = "Livre" | "10 anos" | "12 anos" | "14 anos" | "16 anos"
+/* type Categoria = "Livre" | "10 anos" | "12 anos" | "14 anos" | "16 anos"
 
-type Censura = "2D" | "3D" 
+type Censura = "2D" | "3D"  */

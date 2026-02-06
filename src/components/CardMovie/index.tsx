@@ -3,7 +3,9 @@ import { Tag} from '../Tag'
 import type { CardMovieProps } from '../../types'
 
 
-export const CardMovie = ( { src, alt, titulo, genero, categoria,censura,duracao }: CardMovieProps) => {
+export const CardMovie = ( { ...props }: CardMovieProps) => {
+
+    const {src, alt, titulo, genero, categoria,censura,duracao} = props;
 
   return (
       <li className={styles.card}>
@@ -13,13 +15,13 @@ export const CardMovie = ( { src, alt, titulo, genero, categoria,censura,duracao
             <div className={styles.linha1}>
                 <p>{genero}</p>
                 <Tag
-                    value={categoria.value}
+                    value={categoria}
                 />
                 </div> 
                 <div className={styles.linha2}>
                 <p>{duracao}</p>
                 <Tag
-                    value={censura.value}
+                    value={censura}
                 />
                 </div> 
 

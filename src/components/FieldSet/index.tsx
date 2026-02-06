@@ -1,8 +1,7 @@
 import styles from './FieldSet.module.css'
 
-interface FieldSetProps {
+interface FieldSetProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement>{
     variant: "primary" | "secondary"
-    children: React.ReactNode
 }
 export const FieldSet = ({variant="primary",children}:FieldSetProps) => {
   return (
