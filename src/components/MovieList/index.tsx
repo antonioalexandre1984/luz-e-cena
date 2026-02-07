@@ -1,9 +1,6 @@
 import { CardMovie } from "../CardMovie"
 import styles from './MovieList.module.css'
-import type {CardMovieProps} from "../../types/index"
-interface Movie extends CardMovieProps{
-    title: string
-}
+import type {Movie} from "../../types/index"
 
 interface MovieListProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLUListElement>, HTMLUListElement> {
     movies: Movie[];

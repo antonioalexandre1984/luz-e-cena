@@ -5,13 +5,15 @@ import styles from './MovieSection.module.css'
 import { FieldSet } from '../FieldSet'
 /* import { movies } from './movies' */
 import { MovieList } from '../MovieList'
-import { useEffect, useState } from 'react'
-import type { CardMovieProps } from '../../types'
-import { getMovies } from '../../api'
+import {useFetchMovies} from '../hooks/useFetchMovies'
+import { useFilterMovies } from '../hooks/useFilterMovies'
 
 export const MovieSection = () => {
 
-  const [movies, setMovies] = useState<CardMovieProps[]>([])
+  const {movies,error,loading} = useFetchMovies();
+  const {handleSearch,searchTerm,setSearchTerm,filteredMovies} = useFilterMovies(movies);
+
+  if(error) return <p>{error}</p>
 
   /* Exemplo com uso de funçãos assíncronas
   async function getMovies() {
@@ -20,34 +22,34 @@ export const MovieSection = () => {
     setMovies(data)
   } */
 
-    const fetchMovies = async () => {
-      try{
-        const moviesData = await getMovies();
-        setMovies(moviesData);
-      }catch(err){
-          console.error("Erro ao buscar o filme" + err)
-      }
-    };
-
-
-    useEffect(() => {
-      const fetchData = async () => {
-        await fetchMovies();
-      };
-      fetchData();
-    }, []);
+    // Função para capturar a tecla Enter
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSearch();
+    }
+  };
 
   return (
     <main>
       <section className={styles.container}>
         <FieldSet variant="primary">
-        <InputText placeholder="Pesquisar filmes...."/>
-        <Button variant="icon">
+        <InputText
+         value={searchTerm}
+          onChange={(e)=> setSearchTerm(e.target.value)}
+          onKeyDown={handleKeyDown}
+           placeholder="Pesquisar filmes...."/>
+        <Button
+         variant="icon"
+         onClick={handleSearch}
+         >
             <FaSearch/>
         </Button>
         </FieldSet>
+        {loading && <p>Carregando filmes...</p>}
+        {error && <p>{error}</p>}
         <h1 className={styles.titulo}>Em cartaz</h1>
-            <MovieList movies={movies}/>
+            <MovieList movies={filteredMovies} />
       </section>
     </main>
   )

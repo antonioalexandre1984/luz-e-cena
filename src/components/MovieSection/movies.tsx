@@ -1,4 +1,4 @@
-import type { CardMovieProps } from "../../types";
+import type { Movie } from "../../types";
 import amigodaSombra from "../../../public/Imagens/Cards filmes/Card - Amigo da sombra.png"
 import amigosdobosquemagico from "../../../public/Imagens/Cards filmes/Card - Amigos do bosque mágico.png"
 import caminhoparaoabismo from "../../../public/Imagens/Cards filmes/Card - Caminho para o abismo.png"
@@ -13,7 +13,7 @@ import nexus2 from "../../../public/Imagens/Cards filmes/Card - O nexus do tempo
 
 
 
-export const movies: CardMovieProps[] = [
+export const movies: Movie[] = [
     {
         id: 1,
         src: nexus2,

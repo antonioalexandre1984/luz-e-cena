@@ -1,8 +1,8 @@
 import styles from "./CardMovie.module.css";
 import { Tag } from "../Tag";
-import type { CardMovieProps } from "../../types";
+import type { Movie } from "../../types";
 
-export const CardMovie = ({ ...props }: CardMovieProps) => {
+export const CardMovie = ({ ...props }: Movie) => {
   const { src, alt, titulo, genero, categoria, censura, duracao } = props;
 
   return (

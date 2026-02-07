@@ -1,4 +1,4 @@
-export interface CardMovieProps {
+export interface Movie {
     id: number
     src: string
     alt: string

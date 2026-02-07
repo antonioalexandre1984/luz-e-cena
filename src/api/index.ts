@@ -1,10 +1,10 @@
 import axios from "axios";
-import type { CardMovieProps } from "../types";
+import type { Movie } from "../types";
 
 const BASE_URL = "http://localhost:3001";
 
-export const getMovies = async (): Promise<CardMovieProps[]> => {
-    const response = await axios.get<CardMovieProps[]>(`${BASE_URL}/movies`);
+export const getMovies = async (): Promise<Movie[]> => {
+    const response = await axios.get<Movie[]>(`${BASE_URL}/movies`);
     return response.data;
 };
 
