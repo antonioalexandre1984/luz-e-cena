@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './Footer.module.css'
 import {FooterLogo} from './components/FooterLogo'
 import {FooterInfo} from './components/FooterInfo'
