@@ -6,7 +6,7 @@ interface Movie extends CardMovieProps{
 }
 
 interface MovieListProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLUListElement>, HTMLUListElement> {
-    movies: Movie[]
+    movies: Movie[];
 }
 
 export const MovieList = ({movies}:MovieListProps) => {

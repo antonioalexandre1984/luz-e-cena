@@ -1,4 +1,3 @@
-
 import { FaSearch } from 'react-icons/fa'
 import { Button } from '../Button'
 import { InputText } from '../InputText'
@@ -9,7 +8,6 @@ import { MovieList } from '../MovieList'
 import { useEffect, useState } from 'react'
 import type { CardMovieProps } from '../../types'
 import { getMovies } from '../../api'
-
 
 export const MovieSection = () => {
 

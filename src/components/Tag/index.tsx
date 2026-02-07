@@ -1,9 +1,6 @@
 import styles from './Tag.module.css'
 import classNames from 'classnames';
 
-
-/* export type TagValue = "Livre" | "10 anos" | "12 anos" | "14 anos" | "16 anos" | "2D" | "3D"; */
-
 const tagClasses = {
   Livre: styles.livre,
   "10 anos": styles.dez,
